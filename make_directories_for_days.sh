@@ -4,7 +4,7 @@
 # mkdir day_{loop_number}
 
 max=25
-for i in `seq 3 $max`
+for i in `seq 1 $max`
 do
     mkdir -p "day_$i"
 done
