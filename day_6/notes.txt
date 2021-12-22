@@ -1,0 +1,8 @@
+12/5/21
+1.) Create a "fish object"
+    - New method to create more instances of fish
+    - internal timer property
+    - Method to reduce internal timer
+2.) Set the initial internal timer properties on the initial fish?
+    - Method to read in the initial numbers and create fish with input data as initial internal timer values
+    - Loop through fish

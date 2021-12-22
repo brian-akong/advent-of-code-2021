@@ -1,0 +1,11 @@
+12/5/21
+
+1.) Format data
+    - List of lists containing 2 tuples
+2.) Eliminate entries/elements where x1 != x2 OR y1 != y2
+    if x1 == x2 or y1 == y2:
+        KEEP
+    - Determine boundaries by finding the maximum x and maximum y positions
+3.) Create grid the size of maxium x and maxium y, initialize all points in grid with 0
+4.) Mark areas on grid as having a line going through it (counter)
+    - Count all points on grid where counter >= 2

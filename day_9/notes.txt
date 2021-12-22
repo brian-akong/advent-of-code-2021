@@ -1,0 +1,41 @@
+12/14/21
+
+- Determine size of 2 dimensional map
+    - length of each element
+    - number of elements
+- Check special cases first:
+    - 4 corners:
+        - First element of first row
+        - Last element of first row
+        - First element of last row 
+        - Last element of last row
+    - All other edge elements
+        - All other elements in first row
+        - First element of every row
+        - Last element of every row
+        - All other elements in last row
+- All other "normal" cases:
+    - Check top, right, bottom, and left elements (4 elements in total)
+
+12/21/21
+Part 2
+- Start at each low point (specific array index)
+- Create 4 functions to check each direction (up, right, down, left)
+- Start with checking low points that are corners
+    - Top left:
+        - Check right
+        - Check down
+    - Top right:
+        - Check left
+        - Check down
+    - Bottom left:
+        - Check right
+        - Check up
+    - Bottom right:
+        - Check left
+        - Check up
+- Next check low points that are on the edge
+    - Top row:
+        - Check left
+        - Check right
+        - Check down

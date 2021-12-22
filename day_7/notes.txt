@@ -1,0 +1,10 @@
+12/6/21
+
+Approach 1 (brute force)
+- Determine distance to 1 from all element
+- Count
+
+Approach 2:
+
+- Closest average number
+    - Round to nearest whole number

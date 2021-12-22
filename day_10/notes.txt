@@ -1,0 +1,23 @@
+12/21/2021
+
+- Count number of delimiter symbols in each line (4 kinds: parenthesis, square bracket, brace, chevron)
+    - If number of specific delimiter symbol is not even, then that delimiter symbol is part of a corrupted chunk
+        - Check to see which kind of delimiter it is
+- Calculate score for that delimiter
+    - Make dictionary for delimiter scores
+
+- Iterate through characters
+    - If current character is followed by a "closing" character -> is it the matching closing character?
+        - if yes, remove both characters
+        - if not, incorrect syntax
+            - Calculate score and add to rolling total
+
+Approach #3:
+- Find all (), [], {}, <> pairs and remove
+    while matching delimiters exist:
+        - remove
+- Check for all combinations?
+    (]
+    (}
+    (>
+    (an opening delimiter followed by a delimiter that is not it's closing pair)

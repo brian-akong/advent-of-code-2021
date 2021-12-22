@@ -1,0 +1,59 @@
+12/7/21
+
+1.) Figure out which segments correspond to the digits [1, 4, 7 ,8]
+    1: 2 segments (top right, bottom right)
+    4: 4 segments (top left, top right, middle middle, bottom right)
+    7: 3 segments (top middle, top right, bottom right)
+    8: 7 segments (all of them)
+
+    segments:
+        top middle
+        top right
+        middle middle
+        top left
+        bottom right
+        bottom middle
+        bottom left
+
+    raw = {
+        a: ['c', 'f']
+        b: ['c', 'f']
+        c: ['a']
+        d: ['b', 'd']
+        e: ['b', 'd']
+        f: 
+        g: 
+    }
+
+    - figure out a scheme for matching numbers. for example:
+        - do this order:
+            1, 7, 4, 8
+                - looking at 2 character elements yields segments for 1 => [c, f]
+                - whatever is different between 1 and 7 is is the top middle segment (you know 1 segment for sure [a])
+                - moving on to 4, you know the common segments between 1 and 4 mean the different segments are for 4 [b,d]
+                - moving on to 8, you know 'e' and 'g' are the only segment that are not in 1, 7, or 4 => exclude all common segments from 8 => that yields [e, g]
+                - comparing 9 (i.e. 6 character long elements where all elements/segments are in 4) and 4 => ultimately yields definite position of [g]
+                    - if len(x) == 6:
+                        # check if each individual character is in 4
+                        # segments of 4 = [b, c, d, f]
+                        segments_of_four = [b, c, d, f]
+                        for segment in x:
+                            if all segments in x are in segments_of_four => that means the element is a 9 because 9 is the only 6 segment long digit that contains all segments from 4
+                            - Since we know 'a' definitely, this yields 'g' definitely => the 1 segment not in 4 that we don't know
+                - given 'g', we now know definite position of 'e' => [e]
+                    - 'e' is the only segment not in 9
+                - definitely know [a, e, g] (3 of 7)
+                - comparing 0 and 7:
+                    if len(x) == 6 and at least 1 segment of x in 'e' and all segments of 7 are in x => then it's a 0
+                        - of the 6 segments in this 0, the missing segment is definitely 'd'
+                        - this yields 'd' definitely
+                    - definitely konw [a, b, d, e, g], just need c and f
+                - look at 6
+                    if len(x) == 6 and x contains 'e' and 'd'
+                        - of the 6 segments in this 6, the missing segment is definitely 'c'
+                        - this yields 'f' definitely
+                    now now all segments [a, b, c, d, e, f, g]
+                - Write combos for each digit
+                    if c and f then 1
+                    if a, c, f then 7 etc.
+                    
