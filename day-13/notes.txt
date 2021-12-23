@@ -1,0 +1,6 @@
+12/22/2021
+
+- Find max x and max y of coordinates
+- Create a grid of true and false values, true being the coordinates and false being blank space
+- To simulate a fold along the x axis, shift all points to the right of the x-fold line to the left by (x_fold_line - (x_old - x_fold_line)) i.e. set all the landing points to true
+    - Set all points right of the x-fold line to false
