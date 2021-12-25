@@ -1,0 +1,15 @@
+12/24/2021
+
+- Create 10x10 grid
+- Iterate 100 times
+    - Add 1 to each element
+        - If value if greater than 9, flash (keep track of flashes)
+    - If adjacent element touches a flashing element, add an additional 1 to that element
+        - Repeat until there are no more flahses for that iteration
+
+- Increment all elements
+- Check for values > 9
+    - If true, set to 0, increment surrounding elements
+        - Keep track of indices that are set to 0 and ensure they are all set to 0 throughout the iteration
+- Check all elements again
+    - Keep repeating until no more flashes occur
